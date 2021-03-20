@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Massively by HTML5 UP</title>
+		<title>Jonathan Wamsley Resume</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -27,13 +27,14 @@
 
 				<!-- Header -->
 					<header id="header" >
-						<a href="index.html" class="logo">Jonathan Wamsley Profile</a>
+						<a class="logo">Jonathan Wamsley Profile</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="icons">
 							<li><a href="https://github.com/JonathanWamsley" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://linkedin.com/in/jonathanwamsley" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 						</ul>
 					</nav>
 
@@ -44,10 +45,11 @@
 							<article class="post featured">
 								<header class="major">
 									<h2 align="center" style="padding: 0px">About Me</h2>									
-									<p style="font-size:160%;" >I am an Entry Level Software Engineer that:</p>
-										<li>Has 4 years of coding experience in Python</li>
-										<li>Is passionate about utilizing data to answer problems</li>
-										<li>Is experienced in ETL, automating scripts, database handling</li>
+									<p style="font-size:160%;" >I am A Software Engineer with:</p>
+										<li>4 years of coding experience in Python (web scraping / data processing)</li>
+										<li>6 months of coding experience in Go (Microservices / API's)</li>
+										<li>a passion to utilize data to answer problems</li>
+										<li>experience in creating REST APIs and ETL pipelines</li>
 									<img src="images/young_jonny.png" alt="" />
 								</header>
 								<ul class="actions special">
@@ -55,20 +57,57 @@
 								</ul>
 							</article>
 
+							<div>
+								<h2 style="text-align: center;" style="font-size: larger;">Projects I've Worked On</h2>
+							</div>
+
 						<!-- Posts -->
 							<section class="posts">
 								<article>
 									<header>
-										<h2>Typing Application</h2> 
+										<h2>Banking REST API Microservices</h2> 
+									</header>
+									<img src="images/banking.jpg" alt="" width="420" height="315"/>
+									<p>
+										A banking REST API enables the creation of customers, which can create banking accounts. A transaction endpoint can be used to withdraw or deposit funds between accounts. 
+									</p>
+
+									<p>
+
+										To use the banking api, a banking authorization service must grant approval using jwt. The banking auth api has user login for both customer and admin roles. This means that certain endpoints from the banking api require a user to be logged in and with the appropriate access level.
+									</p>
+										
+									<p>
+										The project has been documented, tested and developed using a SDLC.
+									</p>
+
+									<p>
+										Tools Used: Go, Gorilla, JWT, MySQL, Zap, Docker
+									</p>
+
+									<ul class="actions special">
+										<li><a href="https://github.com/JonathanWamsley/banking" class="button">Project link</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<h2>MetaTyping (keyboard) Application</h2> 
 									</header>
 									<iframe width="420" height="315"
 										src="https://www.youtube.com/embed/xkQGY93j1jU">
 									</iframe>
-									<p>I got into touch typing and wanted features that current typing websites lack so I created a typing application</p>
 
-									<p>I wanted to type content I find interesting that allows users to paste and save information, be able to navigate (backtrack or skip) text while you are typing, see real time typing speed, and store metrics.</p> 
+									<p>
+										MetaTyping is a typing CLI application that displays words that the user types. The app helps users improve their typing speed by recording typing metrics like accuracy and speed. The app uses a columnar-vectorized database to store word metrics so problematic words can be recommended.
+									</p>
 
-									<p>	Being able to store individual word metrics in a database, I then created a dashboard to view strengths and weaknesses in typed words. The program then suggests problematic words the user.</p>
+									<p>
+										MetaTyping has typing sessions through drills, word lists or custom text that show typing metrics after finishing a session.
+									</p>
+
+									<p>Users can keep track of their progression through a dashboard. It features line graphs that show an individual word or word group progression over time. Additionally, a data table/ bar plot shows words metrics like average speed and accuracy that can be filtered.</p>
+
+									<p>Tools Used:Python, Curses, Pandas, Plotly-Dash, DuckDB </p>
 									<ul class="actions special">
 										<li><a href="https://github.com/MetaTypers/MetaTyping" class="button">Project link</a></li>
 									</ul>
@@ -80,12 +119,16 @@
 									<iframe width="420" height="315"
 									src="https://www.youtube.com/embed/l3ZcHgI6aH0">
 									</iframe>
-									<p>I need to apply to jobs and keep track of applications, so I created a program to automate and manage the job applying process by:</p>
-									<li>Web scrapping indeed saving new job pages</li>
-									<li>Filtering desired jobs by nice/must have keywords</li>
-									<li>Creating a semi automated applying process</li>
-									<li>Updating the job db to keep track of application status</li>
-									<li>Visualize my application statistics and history</li>
+	
+									<p>
+										The Indeed Job Applier helps perform the job apply process by web scraping specific job categories, filtering out jobs by tags, applying semi-automatically, and saving jobs applied to.
+									</p>
+										
+									<p>
+										The app uses a CLI interface with json tags to tailor the job postings scraped. These jobs are saved in an unprocessed job listings. The app then allow users to go through these postings which will automatically open 5 tabs linking to the job pages. The types in which job postings they applied too and the process repeats. The jobs applied to get sent to a applied to jobs list that can be accessed.
+									</p>
+										
+									<p>Tools Used: Python, Scrapy, json</p>
 
 									<ul class="actions special">
 										<li><a href="https://github.com/JonathanWamsley/indeed_job_manager" class="button">Project link</a></li>
@@ -96,12 +139,17 @@
 										<h2>Pokemon Card ETL</h2>
 									</header>
 									<img src="images/charmander_card.png" alt="" />
+
 									<p>Pokemon cards have been getting very popular recently, yet there are no complete datasets on pokemon card</p>
 									<p>I created an ETL pipeline to collect and store the pokemon card data (around 15,000 cards)</p>
-									<li><u>Extracted</u> pokemon card data from 3 different sites</li>
-									<li><u>Transformed</u> and cleaned data into a snapshot and normalized dataframes</li>
-									<li><u>Loaded</u> the normalized data into a database</li>
-									<li>Shared pokemon snapshot to the Kaggle community</li>
+									<li><u>Extract</u>: pokemon card data from 3 different sites were web scraped using scrapy</li>
+									<li><u>Transform</u>: The data was cleaned using Pandas and organized into normalized data tables</li>
+									<li><u>Load</u>: the normalized data is inserted into a database</li>
+
+									<p>Below contains the pokemon cards data file in csv</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/JonathanWamsley/pokemon_cards_project/blob/master/data/snapshot_2020-03-24.csv" class="button">Pokemon Cards csv file</a></li>
+									</ul>
 
 									<ul class="actions special">
 										<li><a href="https://github.com/JonathanWamsley/pokemon_cards_project" class="button">Project link</a></li>
@@ -112,8 +160,7 @@
 										<h2>Other Projects</h2>
 									</header>
 									<a class="image fit"><img src="images/maze_bfs.png" alt="" /></a>
-									<li>Data Pipelines: From mock api(Flask) streamed to PostgresSQL</li>
-									<li>3D Make generator and solver using graph algorithms</li>
+									<li>3D Maze generator and solver using graph algorithms</li>
 									<li>Mario Themed Dynamic programming step problem</li>
 									<li>Collected top ngrams from google books using a priority queue to store and merge ngrams data</li>
 									<li>Web Scraped twitch esports data for a twitch streamer</li>
@@ -130,20 +177,22 @@
 						<section class="split contact">
 							<section>
 								<h3>Email</h3>
-								<p><a href="#">JonnyWamsley@gmail.com</a></p>
+								<p>JonnyWamsley@gmail.com</p>
 							</section>
 							<section>
 								<h3>Social</h3>
 								<ul class="icons alt">
 										<li><a href="https://github.com/JonathanWamsley" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+										<li><a href="https://linkedin.com/in/jonathanwamsley" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 								</ul>
+								
 							</section>
 						</section>
 					</footer>
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; 2020 JonathanWamsley</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>&copy; 2021 Jonathan Wamsley</li></ul>
 					</div>
 
 			</div>
